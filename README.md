@@ -47,6 +47,6 @@ Você pode utilizar a aplicação diretamente no seu navegador, sem precisar ins
 
 ------------------------------------------------------------------------
 
-Desenvolvido por Ana Luiza Turani \| [analuizaturani.contato\@gmail.com](mailto:analuizaturani.contato@gmail.com){.email}
+Desenvolvido por Ana Luiza Turani \| [analuizaturani.contato\@gmail.com](mailto:analuizaturani.contato@gmail.com)
 
 Sinta-se à vontade para enviar sugestões ou contribuir com novas ideias de exercícios!
