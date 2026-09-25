@@ -23,12 +23,12 @@ tipos <- c(
 ui <- page_fluid(
   theme = tema_escuro,
   
-  #Estilização própria  
+  # Estilização própria
   tags$head(
     tags$style(HTML("
       body { 
         padding: 15px; 
-        padding-bottom: 80px; /* Margem inferior para o botão fixo não cobrir nada */
+        padding-bottom: 80px; /* Margem inferior para o rodapé fixo não cobrir os cartões */
       }
       
       #qtd {
@@ -52,24 +52,30 @@ ui <- page_fluid(
       
       .card { background-color: transparent !important; }
       
-      /* Classe para fixar o botão no canto inferior direito */
-      .btn-tema-fixo {
+      /* Barra inferior fixa para créditos (esquerda) e botão (direita) */
+      .footer-fixo {
         position: fixed;
         bottom: 20px;
+        left: 20px;
         right: 20px;
         z-index: 1000;
+        pointer-events: none; /* Permite clicar no fundo se necessário */
+      }
+      
+      .footer-fixo * {
+        pointer-events: auto; /* Reativa os cliques para o botão */
       }
     "))
   ),
   
-  #Cabeçalho
+  # Cabeçalho
   div(
     class = "text-center mb-3",
     h4(class = "fw-bold mb-1", "Sorteador Harmônico"),
     p(class = "text-muted small mb-0", "Gere combinações aleatórias de notas fundamentais e estruturas harmônicas para praticar a montagem no piano.")
   ),
   
-  #Controles
+  # Controles
   div(
     class = "d-flex justify-content-between align-items-center mb-3 px-2",
     div(
@@ -85,11 +91,20 @@ ui <- page_fluid(
     )
   ),
   
-  #Área de exercicios
+  # Área de exercícios
   uiOutput("cards_estudo"),
   
+  # Barra inferior fixa (Crédito à esquerda e Botão à direita)
   div(
-    class = "btn-tema-fixo",
+    class = "footer-fixo d-flex justify-content-between align-items-center",
+    
+    # Mensagem de autoria no canto inferior esquerdo
+    span(
+      class = "text-muted small opacity-75",
+      "Desenvolvido por Ana Luiza Turani"
+    ),
+    
+    # Botão de tema no canto inferior direito
     actionButton(
       "btn_tema", 
       "Modo claro", 
@@ -103,7 +118,7 @@ server <- function(input, output, session) {
   
   modo_escuro <- reactiveVal(TRUE)
   
-  #Troca de tema
+  # Troca de tema
   observeEvent(input$btn_tema, {
     if (modo_escuro()) {
       session$setCurrentTheme(tema_claro)
