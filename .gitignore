@@ -2,7 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-EstudoPianoTestes.R
 rsconnect/
 .DS_Store
 Thumbs.db
+EstudoPianoTestes.R
+
