@@ -32,7 +32,7 @@ O objetivo do aplicativo é gerar combinações aleatórias de **notas fundament
 
 ### 1. Executar diretamente pelo R / RStudio
 
-Com o R, RStudio e a biblioteca `shiny` instalados, você pode rodar o aplicativo diretamente do GitHub executando o seguinte comando no seu console do R:
+Com o R, RStudio e os pacotes `shiny` e `bslib` instalados, você pode rodar o aplicativo diretamente do GitHub executando o seguinte comando no seu console do R:
 
 ``` r
 # Certifique-se de ter os pacotes instalados:
