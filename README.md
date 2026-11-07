@@ -1,6 +1,6 @@
 # App Shiny - Estudo de Piano
 
-Um aplicativo interativo desenvolvido em **R** e **Shiny** para ajudar a estudar formações de acordes.
+Um aplicativo interativo desenvolvido em **R** e **Shiny** para ajudar a estudar formações de acordes, por meio do RStudio.
 
 Foi inicialmente pensado para o estudo das formações de acordes no piano, mas pode ser usado para outros instrumentos também!
 
