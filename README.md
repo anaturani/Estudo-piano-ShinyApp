@@ -1,4 +1,4 @@
-# App Shiny - Estudo de Piano
+# App Shiny - ESTUDO PIANO
 
 Um aplicativo interativo desenvolvido em **R** e **Shiny** para ajudar a estudar formações de acordes, por meio do RStudio.
 
